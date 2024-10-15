@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url("bg.png");
+  background-size: cover;
+}
+img[src="level.png"] {
+  height: 100vh;
+  overflow-y: none;
+  position: fixed;
+  animation: offset_slow 2s infinite;
+}
+@keyframes offset_slow {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-100vw);
+  }
+}
+img[src="mario.png"] {
+  position: fixed;
+  bottom: 0;
+  width: 10vh;
+  height: 10vh;
+  animation: bounce-out-down 0.5s infinite ease-in-out;
+}
+@keyframes bounce-out-down {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-50vh);
+  }
+  100% {
+    transform: translateY(50vh);
+  }
+}
